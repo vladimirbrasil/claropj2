@@ -20,6 +20,13 @@ Background:
 Scenario: Import expenses
     When I choose "Importar contas"
     Then I should see the following answer:
+  | Phone         | Value     | Expense   |
+  | 51 7777-7777  | 1,00      | Despesa 1   |
+  | 51 8888-8888  | 2,00      | Despesa 2   |
+  | 51 7777-7777  |           | Despesa 3   |
+  | 51 9999-9999  | 4,00      | Despesa 4   |
+  | 51 9999-9999  | 5,00      | Despesa 5   |
+    And I should see the following answer:
   | User	| Total expenses 	| 
   | Foo 	| 3,00		| 
   | Bar 	| 9,00		| 
