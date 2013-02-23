@@ -1,0 +1,31 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+    <%= render 'shared/user_info' %>
+    </section>       
+    <section>
+      <%= render 'shared/stats' %>
+    </section>       
+  </aside>
+  <div class="span8">
+
+
+
+
+
+    <%= render 'follow_form' if signed_in? %>    
+
+
+
+
+
+    <% if @user.phones.any? %>
+      <h3>Phones (<%= @user.phones.count %>)</h3>
+      <ol class="phones">
+        <%= render @phones %>
+      </ol>
+      <%= will_paginate @phones %>
+    <% end %>
+  </div>  
+</div>

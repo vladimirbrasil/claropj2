@@ -1,0 +1,13 @@
+Afazeres
+
+Não permitir ver outros usuários caso esteja logado (permitir ver todos os telefones da pessoa logada)
+
+Corrigir follow_form em view/users/show     
+Substituir 
+<%= render 'follow_form' if signed_in? %>    
+por 
+telefones, contas de telefone ou algo assim
+
+
+Teste da aplicação original para comparação
+https://fathomless-fortress-4492.herokuapp.com
